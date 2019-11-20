@@ -1,8 +1,11 @@
 #include<iostream>
+#include<fstream>
 using namespace std;
 
 template<class T>
 class TreeNode;
+template<class T>
+class Tree;
 
 template<class T>
 class TreeNode{
@@ -57,8 +60,22 @@ class TreeNode{
         if(rightNode != NULL)
         rightNode->traverseInOrder();
     }
-  
+    ifstream & operator >> (ifstream& file )
+    {
+        // Mushahid write your code here according to the scheme we discuss
+        // this function will and extract data from file
+
+        return file;
+    }
+
+    ofstream & operator << (ofstream &file )
+    {
+        // it will save the results
+
+        return file;
+    }
 };
+
 
 template<class T>
 class Tree{
@@ -84,6 +101,13 @@ class Tree{
         root->traverseInOrder();
     }
 };
+
+template<class T>
+void AnalysisData(Tree<T> &chatData , Tree<T> &predData)
+{
+ // This function will make analysis
+}
+
 int main()
 {
 

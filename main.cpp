@@ -7,7 +7,7 @@ int main()
     chatTree1 = new Tree<string>();
     chatTree2 = new Tree<string>();
     dateTree = new Tree<string>();
-    ifstream file("chat.txt");
+    ifstream file("./data/chat/chat.txt");
     extractData(file , chatTree1 , chatTree2 , dateTree);
     dateTree->BFS();
     cout<<chatTree1->root->user<<endl;

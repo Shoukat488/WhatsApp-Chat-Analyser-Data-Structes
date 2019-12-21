@@ -30,7 +30,7 @@ class Tree{
     TreeNode<T> *root;
     public:
     Tree();
-    void insert(T data , T user);
+    void insert(T data , T user = "");
     void traverseInOrder();
     TreeNode<T>* getRoot();
 	bool search(T value);

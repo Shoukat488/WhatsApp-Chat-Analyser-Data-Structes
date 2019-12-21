@@ -8,11 +8,12 @@ int main()
     chatTree2 = new Tree<string>();
     dateTree = new Tree<string>();
     ifstream file("./data/chat/chat.txt");
-    extractData(file , chatTree1 , chatTree2 , dateTree);
-    dateTree->BFS();
+    extractChatData(file , chatTree1 , chatTree2 , dateTree);
+    // dateTree->BFS();
     cout<<chatTree1->root->user<<endl;
-    chatTree1->BFS();
+    // chatTree1->BFS();
     cout<<endl;
     cout<<chatTree2->root->user<<endl;
-    chatTree2->BFS();
+    // chatTree2->BFS();
+    AnalysisData(chatTree1, chatTree2);
 }

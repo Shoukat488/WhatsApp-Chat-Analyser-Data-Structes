@@ -1,5 +1,5 @@
 template<class T>
-void extractData(ifstream &file , Tree<T> *chatTree1 , Tree<T> *chatTree2 ,  Tree<T> *dataTree)
+void extractChatData(ifstream &file , Tree<T> *chatTree1 , Tree<T> *chatTree2 ,  Tree<T> *dataTree)
 {
     string user1 = "";
     string user2 = "";
@@ -49,6 +49,15 @@ void extractData(ifstream &file , Tree<T> *chatTree1 , Tree<T> *chatTree2 ,  Tre
             chatTree2->insert(element , user2);
         }
     }
-    
-
+}
+template<class T>
+void extractAnalysisData(Tree<T> *emptyObj , ifstream &file)
+{
+    string element;
+    while (file)
+    {
+        file>>element;
+        transform(element.begin() ,element.end() , element.begin() , ::tolower);
+        emptyObj->insert(element);
+    }
 }

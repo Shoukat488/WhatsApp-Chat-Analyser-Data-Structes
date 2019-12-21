@@ -28,12 +28,14 @@ class Tree{
 
     public:
     TreeNode<T> *root;
+    long long int count;
     public:
     Tree();
     void insert(T data , T user = "");
     void traverseInOrder();
     TreeNode<T>* getRoot();
-	bool search(T value);
+    TreeNode<T>* search(T value);
+    long long int getCount();
     void BFS();
     template<class U>
     friend ifstream & operator >> (ifstream& file  , Tree<T> &tree);
@@ -101,12 +103,16 @@ template<class T>
 Tree<T>::Tree()
     {
         root = NULL;
+        count = 0;
     }
-
 template<class T>
-bool Tree<T>::search(T value)
+long long int Tree<T>::getCount()
 {
-	bool flag = false;
+    return count;
+}
+template<class T>
+TreeNode<T>* Tree<T>::search(T value)
+{
 	stack<TreeNode<T> *> tempStack;
 	TreeNode<T> *temp = root;
 
@@ -116,7 +122,7 @@ bool Tree<T>::search(T value)
 		{
 			if(temp->data == value)
 			{
-				flag = true;
+                return temp;
 				break;
 			}
 			tempStack.push(temp);
@@ -127,18 +133,14 @@ bool Tree<T>::search(T value)
 			temp = tempStack.top();
 			tempStack.pop();
 		}
-	
-
 		temp = temp->rightNode;
-		
 	}
-	return flag == true;
+    return NULL;
 }
 
 template<class T>
 void Tree<T>::insert(T value , T user)
     {
-        
        if(root == NULL)
         root = new TreeNode<T>(value , user);
         else
@@ -148,7 +150,6 @@ void Tree<T>::insert(T value , T user)
                 ++ (root->frequency);
                 return;
             }
-            
             queue<TreeNode<T> * > q;
             q.push(root);
             while (!q.empty())
@@ -160,6 +161,7 @@ void Tree<T>::insert(T value , T user)
                 else
                 {
 	                temp->leftNode = new TreeNode<T>(value , user);
+                    ++count;
 	                break;
                 }
                 if(temp->rightNode != NULL )
@@ -167,6 +169,7 @@ void Tree<T>::insert(T value , T user)
                 else
                 {
                     temp->rightNode = new TreeNode<T>(value , user);
+                    ++count;
                     break;
                 }
             }

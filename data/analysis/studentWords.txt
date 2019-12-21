@@ -6,12 +6,19 @@ paper
 homework
 rank
 mark
+mac
+window
 maths
 physics
 teacher
+project
+computer
+pc
 professor
+deadline
 problem
 mids
+submit
 programming
 pass
 fail
@@ -19,6 +26,7 @@ passed
 failed
 complete
 chemistry
+transcipts
 learn
 learning
 grind
@@ -28,6 +36,7 @@ need
 figure
 error
 stuck
+stuff
 happy
 study
 university
@@ -41,6 +50,8 @@ attention
 education
 deadline
 due
+campus
+resumbit
 examination
 mocktest
 classwork
@@ -50,3 +61,7 @@ project
 issue
 code
 semester
+laptop
+teacher
+sir
+damn

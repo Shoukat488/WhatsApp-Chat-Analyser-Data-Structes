@@ -103,7 +103,8 @@ float makeAnalysis( Tree<T> *chat1 , Tree<T> *chat2 , Tree<T> *data )
 
     freqPercent = (float)freqSum/totalFreqSum;
     wordsPercent = (float) findCount/( data->getCount() ) ;
-    finalPercent =  ( (float)freqPercent + wordsPercent ) / 2 ;
+    wordsPercent = (float) wordsPercent * 0.5;
+    finalPercent =  ( (float)freqPercent + wordsPercent )  ;
     finalPercent = (float)finalPercent * 100;
     return finalPercent;
 }

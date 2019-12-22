@@ -1,6 +1,7 @@
 #include "BT.h"
 #include "Extract.h"
 #include "Analysis.h"
+using namespace std;
 int main()
 {
     Tree<string> *chatTree1 , *chatTree2 , *dateTree;

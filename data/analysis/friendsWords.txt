@@ -9,6 +9,8 @@ outing
 visit
 park
 school
+movie
+favorite
 lmao
 okay
 where

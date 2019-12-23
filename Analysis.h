@@ -5,19 +5,16 @@ void AnalysisData(Tree<T> *chatTree1 , Tree<T> *chatTree2 )
 {
     ifstream friendFile("./data/analysis/friendsWords.txt");
     ifstream homeFile("./data/analysis/homeWords.txt");
-    ifstream relativeFile("./data/analysis/relativeWords.txt");
     ifstream studentFile("./data/analysis/studentWords.txt");
     ifstream teacherFile("./data/analysis/teacherWords.txt");
 
     Tree<T> *Friend = new Tree<T>(); 
     Tree<T> *Home = new Tree<T>(); 
-    Tree<T> *Relative = new Tree<T>(); 
     Tree<T> *Student = new Tree<T>(); 
     Tree<T> *Teacher = new Tree<T>();
 
     extractAnalysisData(Friend , friendFile);
     extractAnalysisData(Home , homeFile);
-    extractAnalysisData(Relative , relativeFile);
     extractAnalysisData(Student , studentFile);
     extractAnalysisData(Teacher , teacherFile);
 
@@ -25,7 +22,6 @@ void AnalysisData(Tree<T> *chatTree1 , Tree<T> *chatTree2 )
     homeAnalysis(chatTree1 , chatTree2 , Home);
     friendAnalysis(chatTree1 , chatTree2 , Friend);
     teacherAnalysis(chatTree1 , chatTree2 , Teacher);
-    relativeAnalysis(chatTree1 , chatTree2 , Relative);
 }
 
 template<class T>
@@ -51,12 +47,6 @@ void teacherAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 , Tree<T> *data)
 {
     float percent =  makeAnalysis(chat1 , chat2 , data );
     cout << "Teacher : "<< percent << "%" << endl;
-}
-template<class T>
-void relativeAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 , Tree<T> *data)
-{
-    float percent =  makeAnalysis(chat1 , chat2 , data );
-    cout << "Relatives : "<< percent << "%" << endl;
 }
 template<class T>
 float makeAnalysis( Tree<T> *chat1 , Tree<T> *chat2 , Tree<T> *data )
@@ -101,10 +91,15 @@ float makeAnalysis( Tree<T> *chat1 , Tree<T> *chat2 , Tree<T> *data )
 		temp = temp->rightNode;
 	}
 
-    freqPercent = (float)freqSum/totalFreqSum;
+    freqPercent = ((float)freqSum/totalFreqSum)*0.8;
     wordsPercent = (float) findCount/( data->getCount() ) ;
     wordsPercent = (float) wordsPercent * 0.9;
     finalPercent =  ( (float)freqPercent + wordsPercent )   ;
     finalPercent = (float)finalPercent * 100;
+
+    // if(finalPercent < 50)
+    // finalPercent += 50;
+    // else if(finalPercent < 60)
+    // finalPercent += 30;
     return finalPercent;
 }

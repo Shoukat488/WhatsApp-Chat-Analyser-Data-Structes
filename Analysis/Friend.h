@@ -7,4 +7,6 @@ void friendAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 )
 
     float percent =  makeAnalysis(chat1 , chat2 , Friend );
     cout << "Friend : "<< percent << "%" << endl;
+
+    friendFile.close();
 }

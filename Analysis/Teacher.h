@@ -7,4 +7,6 @@ void teacherAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 )
 
     float percent =  makeAnalysis(chat1 , chat2 , Teacher );
     cout << "Teacher : "<< percent << "%" << endl;
+
+    teacherFile.close();
 }

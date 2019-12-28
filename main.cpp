@@ -1,9 +1,9 @@
 #include "./DataStructure/BT.h"
-#include "./Controllers/Analysis.h"
-#include "./Controllers/Student.h"
-#include "./Controllers/Family.h"
-#include "./Controllers/Teacher.h"
-#include "./Controllers/Friend.h"
+#include "./Analysis/Analysis.h"
+#include "./Analysis/Student.h"
+#include "./Analysis/Family.h"
+#include "./Analysis/Teacher.h"
+#include "./Analysis/Friend.h"
 #include "./DataExtraction/AnalysisData.h"
 #include "./DataExtraction/ChatData.h"
 #include "./Screen/Welcome.h"
@@ -11,6 +11,7 @@
 int main()
 {
     WelcomeNote();
+    system("PAUSE");
     Tree<string> *chatTree1 , *chatTree2 , *dateTree;
     chatTree1 = new Tree<string>();
     chatTree2 = new Tree<string>();

@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 {
     "files.associations": {
         "xstring": "cpp",
         "algorithm": "cpp",
         "fstream": "cpp"
     }
+=======
+{
+    "files.associations": {
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "ostream": "cpp"
+    }
+>>>>>>> ba2fd604132dbf7987ed0f3824b85912c526980d
 }

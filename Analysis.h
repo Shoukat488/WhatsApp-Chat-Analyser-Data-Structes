@@ -22,41 +22,63 @@ void AnalysisData(Tree<T> *chatTree1 , Tree<T> *chatTree2 )
     homeAnalysis(chatTree1 , chatTree2 , Home);
     friendAnalysis(chatTree1 , chatTree2 , Friend);
     teacherAnalysis(chatTree1 , chatTree2 , Teacher);
+
+
+    friendFile.close();
+    homeFile.close();
+    studentFile.close();
+    teacherFile.close();
+
+    
 }
 
 template<class T>
 void studentAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 , Tree<T> *data)
 {
     float percent =  makeAnalysis(chat1 , chat2 , data );
+    if(percent < 1)
+    percent = 0;
     cout << "Student : "<< percent << "%" << endl;
 }
+
 template<class T>
 void homeAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 , Tree<T> *data)
 {
     float percent =  makeAnalysis(chat1 , chat2 , data );
+    if(percent < 1)
+    percent = 0;
     cout << "Family person : "<< percent << "%" << endl;
 }
+
 template<class T>
 void friendAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 , Tree<T> *data)
 {
     float percent =  makeAnalysis(chat1 , chat2 , data );
+    if(percent < 1)
+    percent = 0;
     cout << "Friend : "<< percent << "%" << endl;
 }
+
 template<class T>
 void teacherAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 , Tree<T> *data)
 {
     float percent =  makeAnalysis(chat1 , chat2 , data );
+    if(percent < 1)
+    percent = 0;
     cout << "Teacher : "<< percent << "%" << endl;
 }
+
 template<class T>
 float makeAnalysis( Tree<T> *chat1 , Tree<T> *chat2 , Tree<T> *data )
 {
     TreeNode<T> *temp = data->getRoot();
     stack<TreeNode<T> *> tempStack;
     TreeNode<T> *foundObj;
+    
     long long int findCount = 0;
     long long int freqSum = 0;
     long long int totalFreqSum = 0;
+
     float freqPercent = 0;
     float wordsPercent = 0;
     float finalPercent = 0;
@@ -91,11 +113,10 @@ float makeAnalysis( Tree<T> *chat1 , Tree<T> *chat2 , Tree<T> *data )
 		temp = temp->rightNode;
 	}
 
-    freqPercent = ((float)freqSum/totalFreqSum)*0.8;
+    freqPercent = ((float)freqSum/totalFreqSum); 
     wordsPercent = (float) findCount/( data->getCount() ) ;
-    wordsPercent = (float) wordsPercent * 0.9;
     finalPercent =  ( (float)freqPercent + wordsPercent )   ;
-    finalPercent = (float)finalPercent * 100;
+    finalPercent = (float)finalPercent * ( 100 );
 
     // if(finalPercent < 50)
     // finalPercent += 50;

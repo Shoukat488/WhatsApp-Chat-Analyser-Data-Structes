@@ -50,6 +50,7 @@ void extractChatData(ifstream &file , Tree<T> *chatTree1 , Tree<T> *chatTree2 , 
         }
     }
 }
+
 template<class T>
 void extractAnalysisData(Tree<T> *emptyObj , ifstream &file)
 {

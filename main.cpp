@@ -11,10 +11,12 @@ int main()
     ifstream file("./data/chat/chat.txt");
     extractChatData(file , chatTree1 , chatTree2 , dateTree);
     // dateTree->BFS();
+    cout<<"User 1 : ";
     cout<<chatTree1->root->user<<endl;
     // chatTree1->BFS();
-    cout<<endl;
+    cout<<"User 2: ";
     cout<<chatTree2->root->user<<endl;
-    // chatTree2->BFS();
+    // chatTree2->BFS()
+    cout<<endl;
     AnalysisData(chatTree1, chatTree2);
 }

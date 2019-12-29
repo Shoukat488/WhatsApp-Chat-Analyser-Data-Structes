@@ -28,7 +28,11 @@ int main()
 
     mainOptions();
     cin>>choice;
-
+	if(choice == 4)
+	{
+		cout<<"\t\t\t\t\t   ~~~~~THANK YOU~~~~~";
+		exit(1);
+	}
     while (choice != 4)
     {
         switch(choice)
@@ -51,6 +55,12 @@ int main()
         clearScreen();
         mainOptions();
         cin>>choice;
+        
+		if(choice == 4)
+		{
+			cout<<"\t\t\t\t\t     ~~~~~THANK YOU~~~~~";
+			exit(1);
+		}
     }
 
 }

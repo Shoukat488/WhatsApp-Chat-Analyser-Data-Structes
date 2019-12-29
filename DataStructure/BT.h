@@ -155,7 +155,7 @@ void Tree<T>::getFreqWords()
 		{
 			if(temp->frequency == freq)
             {
-                cout<<temp->data <<endl;
+                cout<<"\t\t\t\t\t"<<temp->data <<endl;
             }
 
 			tempStack.push(temp);

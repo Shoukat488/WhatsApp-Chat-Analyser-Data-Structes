@@ -1,11 +1,16 @@
+#include<iostream>
+using namespace std;
 void relationsOptions()
 {
-    cout<<"-----------Relations------------"<<endl;
-    cout<<"1- Student"<<endl;
-    cout<<"2- Friend"<<endl;
-    cout<<"3- Family person"<<endl;
-    cout<<"4- Teacher"<<endl;
-    cout<<"5- All combinations "<<endl;
-    cout<<"6- Exit"<<endl;
-    cout<<"7- Back"<<endl;
+	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+	cout<<"\t\t\t\t\t\tRELATIONS"<<endl;
+	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl<<endl;
+    cout<<"\t\t\t\t\t      1- Students"<<endl;
+    cout<<"\t\t\t\t\t      2- Friends"<<endl;
+    cout<<"\t\t\t\t\t      3- Family Persons "<<endl;
+    cout<<"\t\t\t\t\t      4- Teachers"<<endl<<endl;
+    cout<<"\t\t\t\t\t      5- All Combinations"<<endl<<endl;
+    cout<<"\t\t\t\t\t      6- Exit"<<endl;
+    cout<<"\t\t\t\t\t      7- Back"<<endl<<endl;
+    cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 }

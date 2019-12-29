@@ -10,8 +10,12 @@ void user1( Tree<T> *data  , Tree<T> *date)
     user1_Options();
     cin >> choice;
     clearScreen();
-
-    while (choice != 6)
+	if(choice == 6)
+	{
+		cout<<"\t\t\t\t\t   ~~~~~THANK YOU~~~~~";
+		exit(1);
+	}
+    while (choice != 7)
     {
         clearScreen();
         
@@ -34,8 +38,13 @@ void user1( Tree<T> *data  , Tree<T> *date)
                 Pause();
                 break;
             case 5:
+                searchOnDate1(data);
+                Pause();
+                break;
+            case 6:
                 exit(1);
                 break;
+
             default :
                 clearScreen();
         }
@@ -43,6 +52,11 @@ void user1( Tree<T> *data  , Tree<T> *date)
         clearScreen();
         user1_Options();
         cin>>choice;
+        if(choice == 6)
+		{
+			cout<<"\t\t\t\t\t   ~~~~~THANK YOU~~~~~";
+			exit(1);
+		}
         
     }
 

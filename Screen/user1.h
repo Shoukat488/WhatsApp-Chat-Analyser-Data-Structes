@@ -1,10 +1,16 @@
+#include<iostream>
+using namespace std;
 void user1_Options()
 {
-    cout<<"What you want to know?"<<endl;
-    cout<<"1- User1 name"<<endl;
-    cout<<"2- No. of messages "<<endl;
-    cout<<"3- Most used word "<<endl;
-    cout<<"4- Most freq date"<<endl;
-    cout<<"5- Exit"<<endl;
-    cout<<"6- Back "<<endl;
+	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+	cout<<"\t\t\t\t\t\tUSER 1"<<endl;
+	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl<<endl;
+    cout<<"\t\t\t\t\t      1- Name"<<endl;
+    cout<<"\t\t\t\t\t      2- No. of messages"<<endl;
+    cout<<"\t\t\t\t\t      3- Most used word"<<endl;
+    cout<<"\t\t\t\t\t      4- Most freq date"<<endl;
+    cout<<"\t\t\t\t\t      5- Find conversation on given date"<<endl;
+    cout<<"\t\t\t\t\t      6- Exit"<<endl<<endl;
+    cout<<"\t\t\t\t\t      7- Back"<<endl<<endl;
+    cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 }

@@ -6,7 +6,7 @@ void homeAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 )
     extractAnalysisData(Home , homeFile);
 
     float percent =  makeAnalysis(chat1 , chat2 , Home );
-    cout << "Family person : "<< percent << "%" << endl;
+    cout <<"\t\t\t\tFamily Person : "<< percent << "%" << endl<<endl;
     
     homeFile.close();
 }

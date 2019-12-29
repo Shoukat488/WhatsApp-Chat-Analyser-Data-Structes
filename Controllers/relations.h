@@ -4,7 +4,6 @@
 #include "../Services/Student.h"
 #include "../Services/Teacher.h"
 #include "../Services/AllRelations.h"
-
 template<class T>
 void Relations(Tree<T> *chat1 , Tree<T> *chat2)
 {
@@ -12,7 +11,11 @@ void Relations(Tree<T> *chat1 , Tree<T> *chat2)
     clearScreen();
     relationsOptions();
     cin>>choice;
-
+	if(choice == 6)
+	{
+		cout<<"\t\t\t\t\t   ~~~~~THANK YOU~~~~~";
+		exit(1);
+	}
     while (choice != 7)
     {
         clearScreen();
@@ -45,6 +48,7 @@ void Relations(Tree<T> *chat1 , Tree<T> *chat2)
 
             case 6:
             exit(1);
+            break;
 
             default:
             clearScreen();
@@ -52,5 +56,10 @@ void Relations(Tree<T> *chat1 , Tree<T> *chat2)
         clearScreen();
         relationsOptions();
         cin >> choice;
+        if(choice == 6)
+		{
+			cout<<"\t\t\t\t\t   ~~~~~THANK YOU~~~~~";
+			exit(1);
+		}
     }
 }

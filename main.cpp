@@ -34,10 +34,10 @@ int main()
         switch(choice)
         {
             case 1:
-                user1(chatTree1);
+                user1(chatTree1 , dateTree );
                 break;
             case 2:
-                user2(chatTree2);
+                user2(chatTree2 , dateTree );
                 break;
             case 3:
                 Relations(chatTree1 , chatTree2);

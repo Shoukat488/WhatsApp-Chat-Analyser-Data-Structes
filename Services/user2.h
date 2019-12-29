@@ -18,3 +18,10 @@ void CountMessage2(Tree<T> *data)
     cout<<"No. of Messages: "<<endl;
     cout<<data->getCount()<<endl;
 }
+
+template<class T>
+void MostFreqDate2(Tree<T> * date)
+{
+    cout<<"Most conversations done by user 2 on  : "<<endl;
+    cout<< date->getCount()<<endl;
+}

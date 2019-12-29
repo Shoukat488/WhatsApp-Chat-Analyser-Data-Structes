@@ -1,7 +1,7 @@
 #include "../Services/user2.h"
 #include "../Screen/user2.h"
 template<class T>
-void user2( Tree<T> *data )
+void user2( Tree<T> *data , Tree<T> *date)
 {
    clearScreen();
 
@@ -10,7 +10,7 @@ void user2( Tree<T> *data )
     cin >> choice;
     clearScreen();
 
-    while (choice != 5)
+    while (choice != 6)
     {
         clearScreen();
         
@@ -29,6 +29,10 @@ void user2( Tree<T> *data )
                 Pause();
                 break; 
             case 4:
+                MostFreqDate2(date);
+                Pause();
+                break;
+            case 5:
                 exit(1);
                 break;
             default :

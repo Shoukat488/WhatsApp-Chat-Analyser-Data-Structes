@@ -1,10 +1,6 @@
 #include <string>
 #include "./DataStructure/BT.h"
 #include "./Analysis/Analysis.h"
-#include "./Analysis/Student.h"
-#include "./Analysis/Family.h"
-#include "./Analysis/Teacher.h"
-#include "./Analysis/Friend.h"
 #include "./DataExtraction/AnalysisData.h"
 #include "./DataExtraction/ChatData.h"
 #include "./Screen/Welcome.h"
@@ -13,6 +9,7 @@
 #include "./Extra/clear.h"
 #include "./Controllers/user1.h"
 #include "./Controllers/user2.h"
+#include "./Controllers/relations.h"
 
 int main()
 {
@@ -43,12 +40,12 @@ int main()
                 user2(chatTree2);
                 break;
             case 3:
-
+                Relations(chatTree1 , chatTree2);
                 break;
             case 4:
                 exit(1);
             default:
-            Pause();
+                clearScreen();
         }
 
         clearScreen();
@@ -56,13 +53,4 @@ int main()
         cin>>choice;
     }
 
-
-
-    // cout<<chatTree1->root->user<<endl;
-    // cout<<endl;
-    // cout<<chatTree2->root->user<<endl;
-    // studentAnalysis(chatTree1,chatTree2);
-    // friendAnalysis(chatTree1 , chatTree2);
-    // homeAnalysis(chatTree1 , chatTree2);
-    // teacherAnalysis(chatTree1 , chatTree2 );
 }

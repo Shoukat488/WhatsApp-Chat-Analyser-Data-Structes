@@ -31,7 +31,7 @@ void user1( Tree<string> *data )
                 exit(1);
                 break;
             default :
-                Pause();
+                clearScreen();
         }
 
         clearScreen();

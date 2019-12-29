@@ -32,9 +32,8 @@ void user2( Tree<T> *data )
                 exit(1);
                 break;
             default :
-                Pause();
+                clearScreen();
         }
-
         clearScreen();
         user2_Options();
         cin>>choice;

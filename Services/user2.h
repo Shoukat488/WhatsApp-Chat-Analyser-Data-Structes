@@ -13,7 +13,7 @@ void MaxFreq2( Tree<T> *data)
 }
 
 template<class T>
-void CountMessages2(Tree<T> *data)
+void CountMessage2(Tree<T> *data)
 {
     cout<<"No. of Messages: "<<endl;
     cout<<data->getCount()<<endl;

@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+
+// shows main menu
 void mainOptions()
 {
 	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;

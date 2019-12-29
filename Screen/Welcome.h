@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+
+// show welcome note and description about program
 void WelcomeNote()
 {
     cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;

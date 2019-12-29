@@ -1,4 +1,5 @@
 
+// finds relations on the basis of student
 template<class T>
 void studentAnalysis( Tree<T> *chat1 , Tree<T> *chat2  )
 {

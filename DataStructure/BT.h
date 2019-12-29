@@ -8,6 +8,8 @@ class TreeNode;
 template<class T>
 class Tree;
 
+
+//Declaration of TREENODE CLASS functions.
 template<class T>
 class TreeNode{
 
@@ -23,6 +25,7 @@ class TreeNode{
     void traverseInOrder();
 };
 
+//Declaration of TREE CLASS functions.
 template<class T>
 class Tree{
 
@@ -43,7 +46,7 @@ class Tree{
     template<class U>
     friend ofstream & operator << (ofstream &file , Tree<T> &tree );
 };
-
+//Parameterize Contructor
 template<class T>
 TreeNode<T>::TreeNode(T data)
     {
@@ -51,6 +54,8 @@ TreeNode<T>::TreeNode(T data)
         frequency = 1;
         leftNode = rightNode =  NULL;
     }
+
+//Parameterize Contructor
 template<class T>
 TreeNode<T>::TreeNode(T data, T user)
     {
@@ -59,13 +64,14 @@ TreeNode<T>::TreeNode(T data, T user)
         frequency = 1;
         leftNode = rightNode =  NULL;
     }
-
+//Function to get the root element
 template<class T>
 TreeNode<T>* Tree<T>::getRoot()
 {
     return root;
 }
 
+//Function to print the Tree elements in level order using built-in queue 
 template<class T>
 void Tree<T>::BFS()
 {
@@ -90,6 +96,7 @@ void Tree<T>::BFS()
     cout<<endl;
 }
 
+//Function to traverse the tree in-order.
 template<class T>
 void TreeNode<T>::traverseInOrder()
     {
@@ -108,18 +115,23 @@ Tree<T>::Tree()
         root = NULL;
         count = 0;
     }
+    
+//function to return the count of an element or total elements
 template<class T>
 long long int Tree<T>::getCount()
 {
     return count;
 }
+
+
+//function to search an element using stack
 template<class T>
 TreeNode<T>* Tree<T>::search(T value)
 {
-	stack<TreeNode<T> *> tempStack;
-	TreeNode<T> *temp = root;
+	stack<TreeNode<T> *> tempStack; //Stack pointer
+	TreeNode<T> *temp = root;		//TreeNode pointer
 
-	while (temp != NULL || !tempStack.empty())
+	while (temp != NULL || !tempStack.empty()) //tight loop to traverse the tree
 	{
 		while (temp != NULL)
 		{
@@ -141,10 +153,11 @@ TreeNode<T>* Tree<T>::search(T value)
     return NULL;
 }
 
+//Function to get the most frequent words using stack
 template<class T>
 void Tree<T>::getFreqWords()
 {
-    int freq = maxFreq();
+    int freq = maxFreq(); //getting the most frequency
     cout<<"Frequency: "<<freq<<endl;
     stack<TreeNode<T> *> tempStack;
 	TreeNode<T> *temp = root;
@@ -153,7 +166,7 @@ void Tree<T>::getFreqWords()
 	{
 		while (temp != NULL)
 		{
-			if(temp->frequency == freq)
+			if(temp->frequency == freq) //checking the word with the maxFreq if equal then print it.
             {
                 cout<<"\t\t\t\t\t"<<temp->data <<endl;
             }
@@ -171,6 +184,7 @@ void Tree<T>::getFreqWords()
 
 }
 
+//Function to get the maximum frequency
 template<class T>
 int Tree<T>::maxFreq()
 {
@@ -200,6 +214,9 @@ int Tree<T>::maxFreq()
 
     return max;
 }
+
+//Function to insert the elements into the tree in level order using queue
+//By mainting the frequency of each word, and count of the total elements.
 template<class T>
 void Tree<T>::insert(T value , T user)
     {
@@ -237,12 +254,13 @@ void Tree<T>::insert(T value , T user)
             }
         }
     }
+//Traversal driver
 template<class T>
 void Tree<T>::traverseInOrder()
     {
         root->traverseInOrder();
     }
-// read data from file
+//function to read the data from file
 template<class T>
 ifstream& operator >> (ifstream& file , Tree<T> &tree )
     {
@@ -254,7 +272,7 @@ ifstream& operator >> (ifstream& file , Tree<T> &tree )
         }
         return file;
     }
-// write data into file
+//function to write the data into file
 template<class T>
 ofstream& operator << (ofstream &file , Tree<T> &root)
     {

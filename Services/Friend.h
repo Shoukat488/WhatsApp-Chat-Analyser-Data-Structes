@@ -1,3 +1,5 @@
+
+// finds relations on the basis of friend
 template<class T>
 void friendAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 )
 {

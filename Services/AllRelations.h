@@ -1,3 +1,5 @@
+
+// it provides services to find all conversations all particular date
 template<class T>
 void allRelations(Tree<T> *chat1 , Tree<T>* chat2)
 {

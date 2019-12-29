@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+
+//show menu for relations
 void relationsOptions()
 {
 	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;

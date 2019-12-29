@@ -1,3 +1,6 @@
+
+// this function extract analysis data
+// it saves into in empty objecy
 template<class T>
 void extractAnalysisData(Tree<T> *emptyObj , ifstream &file)
 {

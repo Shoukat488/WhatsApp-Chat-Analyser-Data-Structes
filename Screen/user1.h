@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+
+// show menu for user1
 void user1_Options()
 {
 	cout<<"\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;

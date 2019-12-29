@@ -1,3 +1,4 @@
+// finds relations on the basis of family
 template<class T>
 void homeAnalysis(Tree<T> *chat1 ,Tree<T> *chat2 )
 {

@@ -29,7 +29,6 @@ class Tree{
     public:
     TreeNode<T> *root;
     long long int count;
-    public:
     Tree();
     void insert(T data , T user = "");
     void traverseInOrder();
@@ -37,7 +36,8 @@ class Tree{
     TreeNode<T>* search(T value);
     long long int getCount();
     void BFS();
-    string maxFreq();
+    void getFreqWords();
+    int maxFreq();
     template<class U>
     friend ifstream & operator >> (ifstream& file  , Tree<T> &tree);
     template<class U>
@@ -142,10 +142,10 @@ TreeNode<T>* Tree<T>::search(T value)
 }
 
 template<class T>
-string Tree<T>::maxFreq()
+void Tree<T>::getFreqWords()
 {
-    int max = 0;
-    string word;
+    int freq = maxFreq();
+    cout<<"Frequency: "<<freq<<endl;
     stack<TreeNode<T> *> tempStack;
 	TreeNode<T> *temp = root;
 
@@ -153,10 +153,9 @@ string Tree<T>::maxFreq()
 	{
 		while (temp != NULL)
 		{
-			if(temp->frequency > max)
+			if(temp->frequency == freq)
             {
-                max = temp->frequency;
-                word = temp->data;
+                cout<<temp->data <<endl;
             }
 
 			tempStack.push(temp);
@@ -170,7 +169,36 @@ string Tree<T>::maxFreq()
 		temp = temp->rightNode;
 	}
 
-    return word;
+}
+
+template<class T>
+int Tree<T>::maxFreq()
+{
+    int max = 0;
+    stack<TreeNode<T> *> tempStack;
+	TreeNode<T> *temp = root;
+
+	while (temp != NULL || !tempStack.empty())
+	{
+		while (temp != NULL)
+		{
+			if(temp->frequency > max)
+            {
+                max = temp->frequency;
+            }
+
+			tempStack.push(temp);
+			temp = temp->leftNode;
+		}
+		if(!tempStack.empty())
+		{
+			temp = tempStack.top();
+			tempStack.pop();
+		}
+		temp = temp->rightNode;
+	}
+
+    return max;
 }
 template<class T>
 void Tree<T>::insert(T value , T user)

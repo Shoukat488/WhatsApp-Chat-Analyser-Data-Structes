@@ -9,7 +9,7 @@ template<class T>
 void MaxFreq1( Tree<T> *data)
 {
     cout<<"Most Repeated Word"<<endl;
-    cout<<data->maxFreq()<<endl;
+    data->getFreqWords();
 }
 
 template<class T>
@@ -23,5 +23,5 @@ template<class T>
 void MostFreqDate1(Tree<T> * date)
 {
     cout<<"Most conversations done by user 1 on : "<<endl;
-    cout<< date->getCount()<<endl;
+    date->getFreqWords();
 }
